@@ -39,9 +39,12 @@
                         </div>
                     </div>
                     <div class="col mt-3">
+                        <h4 class="mb-4">how knowledgeable in the following fields would you consider yourself on a scale of 1-5</h4>
                         <div class="row" id="row1"></div>
                         <div class="row" id="row2"></div>
+                        <p>all of the data above was taken form wikipedia.</p>
                         <button type="button" class="btn btn-lg btn-outline-secondary mt-4" id="submitBtn">Submit Answers</button>
+                        <button type="button" class="btn btn-lg btn-outline-secondary mt-4 ml-2" id="homeBtn">Go back to homepage</button>
                     </div>
                 </div>
                 <!-- Modal -->
@@ -52,7 +55,9 @@
                             <div class="card-body">
                                 <h5 class="card-title" id="matchName"></h5>
                                 <p class="card-text" id="matchAbout"></p>
-                                <a href="#" class="btn btn-secondary">Go back to homepage</a>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -121,26 +126,64 @@
                     $dropdownBtn, $dropdownMenu))))
             }
 
-            new Card('#row1', 'question1', 'math', 'calc', ['1', '2', '3', '4', '5'],
-                "http://via.placeholder.com/350x250")
-            new Card('#row1', 'question2', 'math', 'calc', ['1', '2', '3', '4', '5'],
-                "http://via.placeholder.com/350x250")
-            new Card('#row1', 'question3', 'math', 'calc', ['1', '2', '3', '4', '5'],
-                "http://via.placeholder.com/350x250")
-            new Card('#row1', 'question4', 'math', 'calc', ['1', '2', '3', '4', '5'],
-                "http://via.placeholder.com/350x250")
-            new Card('#row1', 'question5', 'math', 'calc', ['1', '2', '3', '4', '5'],
-                "http://via.placeholder.com/350x250")
-            new Card('#row2', 'question6', 'math', 'calc', ['1', '2', '3', '4', '5'],
-                "http://via.placeholder.com/350x250")
-            new Card('#row2', 'question7', 'math', 'calc', ['1', '2', '3', '4', '5'],
-                "http://via.placeholder.com/350x250")
-            new Card('#row2', 'question8', 'math', 'calc', ['1', '2', '3', '4', '5'],
-                "http://via.placeholder.com/350x250")
-            new Card('#row2', 'question9', 'math', 'calc', ['1', '2', '3', '4', '5'],
-                "http://via.placeholder.com/350x250")
-            new Card('#row2', 'question10', 'math', 'calc', ['1', '2', '3', '4', '5'],
-                "http://via.placeholder.com/350x250")
+            new Card('#row1', 'question1', 'Astronomy',
+                " is a natural science that studies celestial objects and phenomena. It applies mathematics, physics, and chemistry, in an effort to explain the origin of those objects and phenomena and their evolution. Objects of interest include planets, moons, stars, galaxies, and comets; the phenomena include supernova explosions, gamma ray bursts, and cosmic microwave background radiation.", [
+                    '1', '2', '3', '4', '5'
+                ],
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Crab_Nebula.jpg/580px-Crab_Nebula.jpg")
+            new Card('#row1', 'question2', 'Biology',
+                "is the natural science that studies life and living organisms, including their physical structure, chemical processes, molecular interactions, physiological mechanisms, development and evolution.[1] Despite the complexity of the science, there are certain unifying concepts that consolidate it into a single, coherent field. Biology recognizes the cell as the basic unit of life, genes as the basic unit of heredity, and evolution as the engine that propels the creation and extinction of species.", [
+                    '1',
+                    '2', '3', '4', '5'
+                ],
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/EscherichiaColi_NIAID.jpg/234px-EscherichiaColi_NIAID.jpg"
+            )
+            new Card('#row1', 'question3', 'Chemistry',
+                "Chemistry is the scientific discipline involved with compounds composed of atoms, i.e. elements, and molecules, i.e. combinations of atoms: their composition, structure, properties, behavior and the changes they undergo during a reaction with other compounds. Chemistry addresses topics such as how atoms and molecules interact via chemical bonds to form new chemical compounds.", [
+                    '1', '2', '3', '4', '5'
+                ],
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Caffeine_%281%29_3D_ball.png/460px-Caffeine_%281%29_3D_ball.png"
+            )
+            new Card('#row1', 'question4', 'Computer Science',
+                "is the study of the theory, experimentation, and engineering that form the basis for the design and use of computers. It is the scientific and practical approach to computation and its applications and the systematic study of the feasibility, structure, expression, and mechanization of the methodical procedures (or algorithms) that underlie the acquisition, representation, processing, storage, communication of, and access to, information.", [
+                    '1', '2', '3', '4', '5'
+                ],
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/SIMD.svg/400px-SIMD.svg.png")
+            new Card('#row1', 'question5', 'Ecology',
+                "is the branch of biology which studies the interactions among organisms and their environment. Objects of study include interactions of organisms with each other and with abiotic components of their environment. Topics of interest include the biodiversity, distribution, biomass, and populations of organisms, as well as cooperation and competition within and between species", [
+                    '1', '2', '3', '4', '5'
+                ],
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/500px-The_Earth_seen_from_Apollo_17.jpg"
+            )
+            new Card('#row2', 'question6', 'Geography',
+                "is a field of science devoted to the study of the lands, features, inhabitants, and phenomena of Earth. The first person to use the word was Eratosthenes. Geography is an all-encompassing discipline that seeks an understanding of Earth and its human and natural complexities—not merely where objects are, but also how they have changed and come to be.", [
+                    '1', '2', '3', '4', '5'
+                ],
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/L%C3%ADnea_de_Wallace.jpg/537px-L%C3%ADnea_de_Wallace.jpg"
+            )
+            new Card('#row2', 'question7', 'Geology',
+                "is an earth science concerned with the solid Earth, the rocks of which it is composed, and the processes by which they change over time. Geology can also refer to the study of the solid features of any terrestrial planet or natural satellite such as Mars or the Moon.", [
+                    '1', '2', '3', '4', '5'
+                ],
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/1875_Dumont%27s_geological_map_of_Europe.jpg/600px-1875_Dumont%27s_geological_map_of_Europe.jpg"
+            )
+            new Card('#row2', 'question8', 'Physics',
+                'is the science of behavior and mind, including conscious and unconscious phenomena, as well as feeling and thought. It is an academic discipline of immense scope and diverse interests that, when taken together, seek an understanding of the emergent properties of brains, and all the variety of epiphenomena they manifest.', [
+                    '1', '2', '3', '4', '5'
+                ],
+                "https://upload.wikimedia.org/wikipedia/commons/9/9a/CollageFisica.jpg")
+            new Card('#row2', 'question9', 'Psychology',
+                "Psychology is the science of behavior and mind, including conscious and unconscious phenomena, as well as feeling and thought. It is an academic discipline of immense scope and diverse interests that, when taken together, seek an understanding of the emergent properties of brains, and all the variety of epiphenomena they manifest.", [
+                    '1', '2', '3', '4', '5'
+                ],
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQAHQhuIrm1PLaOMpvNQ6pMwLpGcDjrgsivEahpyFNZrrrLqBeuQ"
+            )
+            new Card('#row2', 'question10', 'Zoology',
+                "or animal biology is the branch of biology that studies the animal kingdom, including the structure, embryology, evolution, classification, habits, and distribution of all animals, both living and extinct, and how they interact with their ecosystems.", [
+                    '1', '2', '3', '4', '5'
+                ],
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTArpbU-BoQM7ELNCEr_zR1TqA8OfR5q9X9U3zSKsczP8045yRMFw"
+            )
 
             $('.dropdown-toggle').on('click', function () {
                 $('.dropdown-item').on('click', function () {
@@ -166,10 +209,7 @@
                     scores
                 };
 
-                console.log(user)
-
                 $.post("/api/friends", user, (data) => {
-
                     let {
                         name,
                         imgLink,
@@ -178,9 +218,13 @@
                     $('#matchImg').attr("src", imgLink)
                     $('#matchName').html(name)
                     $('#matchAbout').html(about)
-                    $('#myModal').modal('show');
+                    $('#myModal').modal('show')
+
                 })
             })
+            $('#homeBtn').on('click', () => {
+                window.location.href = "/"
+            });
         </script>
 </body>
 
